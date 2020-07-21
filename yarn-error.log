@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\kang\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add --dev electron@7.1.0
+  C:\Program Files\nodejs\node.exe C:\Users\kang\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js deploy
 
 PATH: 
   D:\dev\electron-pull\node_modules\.bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.191-1\bin;C:\Program Files\Git\cmd;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.191-1\bin;C:\Program Files\PuTTY\;C:\Program Files\Memurai\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\library\OpenSSL\bin;C:\Program Files\nodejs\;C:\Scoop\shims;C:\Users\kang\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\kang\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\kang\AppData\Roaming\npm
@@ -14,12 +14,17 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EBUSY: resource busy or locked, unlink 'D:\dev\electron-pull\node_modules\electron\dist\chrome_100_percent.pak'
+  SyntaxError: D:\dev\electron-pull\package.json: Unexpected token } in JSON at position 1273
+      at JSON.parse (<anonymous>)
+      at C:\Users\kang\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\kang\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:304:30)
+      at C:\Users\kang\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:315:13
 
 npm manifest: 
   {
     "name": "dewith",
-    "version": "0.0.7",
+    "version": "0.0.1",
     "author": "DeveloperKANG <qoo1476@hanmail.net>",
     "description": "dewith crawler",
     "license": "ISC",
@@ -38,6 +43,14 @@ npm manifest:
       "postinstall": ""
     },
     "build": {
+      "publish": [
+        {
+          "provider": "github",
+          "owner": "qoo1476",
+          "repo": "my-practice",
+          "token": "1d059a37feb0ac28e1799996364227d3862f9af0 ",
+        }
+      ],
       "productName": "dewith",
       "appId": "com.dewith",
       "directories": {
@@ -128,7 +141,7 @@ npm manifest:
     },
     "repository": {
       "type": "git",
-      "url": "https://github.com/qoo1476/naver-crawl.git"
+      "url": "https://github.com/qoo1476/my-practice.git"
     }
   }
 
