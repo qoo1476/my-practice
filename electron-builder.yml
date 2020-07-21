@@ -1,5 +1,0 @@
-publish:
-  provider: github
-  owner: qoo1476
-  repo: my-practice
-  token: 5fe496136f3d1f06ef7be5b5a05596c8eec44d40
