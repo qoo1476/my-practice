@@ -6,7 +6,7 @@
   "license": "ISC",
   "main": "./dist/electron/main.js",
   "scripts": {
-    "deploy": "cross-env NODE_ENV=production node .electron-vue/build.js && electron-builder --win --publish always",
+    "deploy": "cross-env NODE_ENV=production node .electron-vue/build.js && electron-builder build --win --publish always",
     "build": "node .electron-vue/build.js && electron-builder",
     "build:dir": "node .electron-vue/build.js && electron-builder --dir",
     "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
@@ -19,13 +19,6 @@
     "postinstall": ""
   },
   "build": {
-    "publish": [
-      {
-        "provider": "github",
-        "owner": "qoo1476",
-        "repo": "my-practice"
-      }
-    ],
     "productName": "dewith",
     "appId": "com.dewith",
     "directories": {
