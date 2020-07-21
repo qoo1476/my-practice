@@ -23,8 +23,7 @@
       {
         "provider": "github",
         "owner": "qoo1476",
-        "repo": "my-practice",
-        "token": "2a0120be16804c013fb4047d5c7db0855640c84f"
+        "repo": "my-practice"
       }
     ],
     "productName": "dewith",
