@@ -8,9 +8,6 @@ import puppeteer from 'puppeteer';
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
  */
 if (process.env.NODE_ENV !== 'development') {
-    autoUpdater.setFeedURL({
-        token: '1362a81cfc64e0e8388ddc3a36e44ebc862805be',
-    });
     global.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
 }
 

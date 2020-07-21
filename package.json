@@ -1,6 +1,6 @@
 {
   "name": "dewith",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "DeveloperKANG <qoo1476@hanmail.net>",
   "description": "dewith crawler",
   "license": "ISC",
@@ -19,6 +19,13 @@
     "postinstall": ""
   },
   "build": {
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "qoo1476",
+        "repo": "my-practice"
+      }
+    ],
     "productName": "dewith",
     "appId": "com.dewith",
     "directories": {
