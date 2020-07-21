@@ -24,7 +24,7 @@
         "provider": "github",
         "owner": "qoo1476",
         "repo": "my-practice",
-        "token": "1d059a37feb0ac28e1799996364227d3862f9af0"
+        "token": "2a0120be16804c013fb4047d5c7db0855640c84f"
       }
     ],
     "productName": "dewith",
@@ -89,7 +89,7 @@
     "deepmerge": "^4.2.2",
     "del": "^3.0.0",
     "devtron": "^1.4.0",
-    "electron": "4.0.0",
+    "electron": "7.2.4",
     "electron-builder": "22.1.0",
     "electron-debug": "^1.5.0",
     "electron-devtools-installer": "^2.2.4",
