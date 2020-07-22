@@ -1,36 +1,29 @@
 <template>
-    <v-row>
-        <v-col cols="12">
-            <v-card class="mx-10 mt-12" elevation="12" v-if="!showList">
-                <v-card-title>네이버 로그인 테스트</v-card-title>
-                <v-card-text>
-                    <v-row>
-                        <v-col cols="12">
-                            <v-text-field label="네이버아이디" solo-inverted hide-details v-model="naverId"/>
-                        </v-col>
-                        <v-col cols="12">
-                            <v-text-field label="네이버비밀번호" type="password" solo-inverted hide-details
-                                          v-model="naverPw"/>
-                        </v-col>
-                    </v-row>
-                </v-card-text>
-                <v-card-actions>
-                    <v-btn :ripple="false" x-large color="indigo" dark block @click="sendEmail"
-                           :loading="loading">
-                        테스트 크롤링 실행
+    <v-card tile flat style="padding: 48px 148px;">
+        <v-card-title>{{showList ? '최근메일목록(테스트용입니다. 맞는지 확인해보세요.)' : '로그인'}}</v-card-title>
+        <v-divider />
+        <v-card-text>
+            <div v-if="!showList">
+                <v-text-field class="py-5" label="네이버아이디" hide-details v-model="naverId" @keyup.enter.native.prevent="sendEmail"/>
+                <v-text-field class="py-5" label="네이버비밀번호" type="password" hide-details
+                              v-model="naverPw" @keyup.enter.native.prevent="sendEmail"/>
+                <div class="mt-12 d-flex justify-center">
+                    <v-btn :ripple="false" x-large color="indigo" dark @click="sendEmail"
+                           :loading="loading" tile style="padding: 0px 92px;" elevation="0">
+                        로그인
                     </v-btn>
-                </v-card-actions>
-            </v-card>
+                </div>
+            </div>
             <lists :items="items" v-if="showList"/>
-        </v-col>
-    </v-row>
+        </v-card-text>
+    </v-card>
 </template>
 
 <script>
-    import Lists from "./Lists";
+    import Lists from "../Lists";
 
     export default {
-        name: 'landing-page',
+        name: 'NaverLogin',
         components: {Lists},
         data: () => ({
             loading: false,

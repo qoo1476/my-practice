@@ -7,8 +7,17 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'landing-page',
-      component: require('@/components/LandingPage').default
+      redirect: '/naver'
+    },
+    {
+      path: '/naver',
+      name: 'naver-main',
+      component: require('@/components/naver/NaverMain').default
+    },
+    {
+      path: '/kakao',
+      name: 'kakao-main',
+      component: require('@/components/kakao/KakaoMain').default
     },
     {
       path: '*',
